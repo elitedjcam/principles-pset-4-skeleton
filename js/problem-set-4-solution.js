@@ -4,8 +4,8 @@
 
 function hello() {
   let result = "Hello, AP Computer Science Principles!";
+  //This assigns the "hello" string to the variable
   document.getElementById("output1").innerHTML = result;
-
   check("hello");
 }
 
@@ -15,10 +15,11 @@ function hello() {
 
 function helloAgain() {
   let name = prompt("What is your name?");
-
+  //This asks for your name and stores it in the name variable
   let result = "Hello, " + name + "!";
+  //This creates a string with a greeting including what you put in the name variable
   document.getElementById("output2").innerHTML = result;
-
+  
   check("helloAgain", name);
 }
 
@@ -28,8 +29,9 @@ function helloAgain() {
 
 function celsius() {
   let cels = Number(((Math.random() * 1001) - 100).toFixed(2));
-
+  //Generates a random number to be converted to fahrenheit
   let fahr = cels * 9 / 5 + 32;
+  //Uses the celsius value to calculate fahrenheit
   let result = cels + " degrees Celsius equals " + fahr.toFixed(2) + " degrees Fahrenheit.";
   document.getElementById("output3").innerHTML = result;
 
@@ -42,8 +44,9 @@ function celsius() {
 
 function fahrenheit() {
   let fahr = Number(((Math.random() * 1001) - 100).toFixed(2));
-
+  //Generates a random number to be converted to celsius
   let cels = (fahr - 32) * 5 / 9;
+  //Calculates celsius with the fahrenheit value
   let result = fahr + " degrees Fahrenheit equals " +  cels.toFixed(2) + " degrees Celsius.";
   document.getElementById("output4").innerHTML = result;
 
@@ -58,7 +61,7 @@ function inches() {
   const MILE = 63360;
   const YARD = 36;
   const FOOT = 12;
-
+  //Sets the appropriate amount of inches per unit of length
   let input = -1;
   while (input < 0) {
     input = Number(prompt("Enter a non-negative integer."));
@@ -100,7 +103,7 @@ function inches() {
 function centimeters() {
   const KILOMETER = 100000;
   const METER = 100;
-
+  //Sets the appropriate amount of centimeters per unit of length
   let input = -1;
   while (input < 0) {
     input = Number(prompt("Enter a non-negative integer."));
@@ -141,7 +144,7 @@ function fluidOunces() {
   const QUART = 32;
   const PINT = 16;
   const CUP = 8;
-
+  //Sets the appropriate amount of fluid ounces per unit of volume
   let input = -1;
   while (input < 0) {
     input = Number(prompt("Enter a non-negative integer."));
